@@ -1,0 +1,13 @@
+@startuml
+[*] --> new_note : user response 
+new_note : /get note details
+new_note : do/cache data 
+new_note : do/save note at user response
+new_note --> modify_note : user response
+modify_note : /get data
+modify_note : do/replace data with the original 
+[*] --> delete_note : /get note 
+delete_note : do/delete note 
+delete_note --> [*]
+modify_note --> [*]
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+skinparam sequenceParticipant underline
+skinparam sequenceActor underline
+actor User
+participant "notes list" as A
+participant "system database" as B
+activate User
+User -> A : add note()
+activate A
+A -> B : upload()
+deactivate A
+Activate B
+B --> A : success update
+deactivate B
+activate A
+A --> User : success update
+deactivate A
+User -> A : modify()
+activate A
+A -> A : search()
+A -> B 
+deactivate A
+activate B
+B --> A : success update 
+deactivate B
+activate A
+A --> User : success update 
+deactivate A
+User -> A : view history()
+activate A
+A --> User : feedback 
+deactivate A
+@enduml
+
+
+ 

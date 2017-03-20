@@ -1,0 +1,13 @@
+@startuml 
+
+[*] --> delete_media : /get media details
+delete_media : do/delete the media 
+[*] --> upload_media 
+upload_media : /get media details 
+upload_media --> view_media 
+view_media : do/show all the previously uploaded media
+[*] --> view_media : user response
+view_media --> [*]
+delete_media --> [*]
+
+@enduml

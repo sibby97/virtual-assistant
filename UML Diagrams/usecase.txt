@@ -1,0 +1,41 @@
+@startuml
+
+skinparam packageStyle rectangle
+
+actor user
+
+rectangle Here_I_am{
+
+user -- (new \naccount)
+
+user -- (login)
+
+(login) .> (profile)
+(new \naccount) .> (profile)
+(profile) .> (set \nreminder) : include
+
+(profile) .> (generate \nCV) : include
+
+(modify CV) .> (generate \nCV) :extend
+(generate \nCV) .> (view CV list) : include 
+(profile) .> (search \nweb) : include
+
+(profile) .> (upload \nmedia) : include
+
+(profile) .> (add \nnotes) : include
+
+(reset \nreminder) .> (set \nreminder) : extend
+
+(set \nreminder) .> (view \nprevious \nreminders) : include
+
+(modify \nmedia) .> (upload \nmedia) : extend
+
+(upload \nmedia) .> (view \nmedia) : include
+
+(add \nnotes) .> (view \nprevious \nnotes) : include
+
+(modify) .> (add \nnotes) : extend
+
+}
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+[*] --> set_reminder
+[*] --> reset_reminder : /get reminder details 
+set_reminder : /get reminder details  
+set_reminder : do/mark the clock 
+set_reminder --> view_history 
+view_history : do/show all the previous reminders
+reset_reminder : /get new details
+reset_reminder : do/remove the previous time marked and mark the new time in the clock
+reset_reminder --> view_history
+view_history --> [*]
+
+@enduml

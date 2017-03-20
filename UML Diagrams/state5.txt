@@ -1,0 +1,14 @@
+@startuml
+[*] --> new_CV 
+new_CV : do/get all the fields
+new_CV : do/enter all the fields in a document with style script
+new_CV : /save the document
+new_CV --> new_CV : [all the mandatory fields not entered]
+[*] --> delete_CV : /get CV 
+delete_CV : /delete the document
+[*] --> print_CV : user response /get CV
+print_CV : do/print the CV
+print_CV --> [*]
+delete_CV --> [*]
+new_CV --> print_CV : user response 
+@enduml

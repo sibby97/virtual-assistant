@@ -1,0 +1,9 @@
+@startuml
+
+[*] --> login : /get username and password
+login : do/check username
+login : do/match username and password
+login --> login : [username doesnt exist]
+login --> profile : [username exists && passwords matches the username]
+profile --> [*]
+@enduml
