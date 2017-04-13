@@ -1,5 +1,12 @@
 # virtual-assistant
-A C file for the testing of procedure oriented language to make a software.
+## Code in C
+To test the boundaries of procedure oriented programming,a C file was made.
 The C file only includes the login and registration page and the CV generation.
-An SRS (IEEE template used) related to the software (uploading later) of "virtual-assistant.
-A Data Flow Diagram for the software
+## Software Requirements Specifications (SRS)
+An SRS (IEEE template used) related to the software of "virtual-assistant" is included.
+All the features are not yet implemented.
+## DFD
+A Data Flow Diagram for the software is included showing the flow of information.
+## UML Diagrams
+Class Diagram, Use case Diagram, Sequence Diagram, State Diagram for the software are also included.
+
